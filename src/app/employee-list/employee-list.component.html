@@ -1,0 +1,7 @@
+<div>
+  <p>Holiday planner</p>
+  <p>Employee List</p>
+  <ul *ngFor="let employee of employeeList; index as i">
+    <li [routerLink]="'/'+i">Employee name: {{employee.employeeName}}</li>
+  </ul>
+</div>

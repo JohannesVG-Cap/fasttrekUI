@@ -3,17 +3,27 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeHolidayComponent } from './employee-holiday/employee-holiday.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import {provideHttpClient} from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmployeeComponent,
+    EmployeeHolidayComponent,
+    EmployeeListComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
